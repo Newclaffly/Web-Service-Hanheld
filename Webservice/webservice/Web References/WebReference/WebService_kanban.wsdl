@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insert_data_to_db_from_local">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srctcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dockcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pack" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="chk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="day" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ekb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_data_to_db_from_localResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insert_data_to_db_from_localResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatate_data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Partnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Srctcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dockcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bit" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="day" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="order" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatate_dataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updatate_dataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="count_rows_db">
+        <s:complexType />
+      </s:element>
+      <s:element name="count_rows_dbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="count_rows_dbResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_m_kanban">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_m_kanbanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_m_kanbanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_part_tag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delivery" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_part_tagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_part_tagResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insert_data_to_db_from_localSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_data_to_db_from_local" />
+  </wsdl:message>
+  <wsdl:message name="insert_data_to_db_from_localSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_data_to_db_from_localResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatate_dataSoapIn">
+    <wsdl:part name="parameters" element="tns:updatate_data" />
+  </wsdl:message>
+  <wsdl:message name="updatate_dataSoapOut">
+    <wsdl:part name="parameters" element="tns:updatate_dataResponse" />
+  </wsdl:message>
+  <wsdl:message name="count_rows_dbSoapIn">
+    <wsdl:part name="parameters" element="tns:count_rows_db" />
+  </wsdl:message>
+  <wsdl:message name="count_rows_dbSoapOut">
+    <wsdl:part name="parameters" element="tns:count_rows_dbResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_m_kanbanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_m_kanban" />
+  </wsdl:message>
+  <wsdl:message name="get_m_kanbanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_m_kanbanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_part_tagSoapIn">
+    <wsdl:part name="parameters" element="tns:get_part_tag" />
+  </wsdl:message>
+  <wsdl:message name="get_part_tagSoapOut">
+    <wsdl:part name="parameters" element="tns:get_part_tagResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_kanbanSoap">
+    <wsdl:operation name="insert_data_to_db_from_local">
+      <wsdl:input message="tns:insert_data_to_db_from_localSoapIn" />
+      <wsdl:output message="tns:insert_data_to_db_from_localSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatate_data">
+      <wsdl:input message="tns:updatate_dataSoapIn" />
+      <wsdl:output message="tns:updatate_dataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="count_rows_db">
+      <wsdl:input message="tns:count_rows_dbSoapIn" />
+      <wsdl:output message="tns:count_rows_dbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_m_kanban">
+      <wsdl:input message="tns:get_m_kanbanSoapIn" />
+      <wsdl:output message="tns:get_m_kanbanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_part_tag">
+      <wsdl:input message="tns:get_part_tagSoapIn" />
+      <wsdl:output message="tns:get_part_tagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_kanbanSoap" type="tns:WebService_kanbanSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert_data_to_db_from_local">
+      <soap:operation soapAction="http://tempuri.org/insert_data_to_db_from_local" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatate_data">
+      <soap:operation soapAction="http://tempuri.org/updatate_data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="count_rows_db">
+      <soap:operation soapAction="http://tempuri.org/count_rows_db" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_m_kanban">
+      <soap:operation soapAction="http://tempuri.org/get_m_kanban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_part_tag">
+      <soap:operation soapAction="http://tempuri.org/get_part_tag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_kanbanSoap12" type="tns:WebService_kanbanSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert_data_to_db_from_local">
+      <soap12:operation soapAction="http://tempuri.org/insert_data_to_db_from_local" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatate_data">
+      <soap12:operation soapAction="http://tempuri.org/updatate_data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="count_rows_db">
+      <soap12:operation soapAction="http://tempuri.org/count_rows_db" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_m_kanban">
+      <soap12:operation soapAction="http://tempuri.org/get_m_kanban" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_part_tag">
+      <soap12:operation soapAction="http://tempuri.org/get_part_tag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_kanban">
+    <wsdl:port name="WebService_kanbanSoap" binding="tns:WebService_kanbanSoap">
+      <soap:address location="http://192.168.0.14/ASS/WebService_kanban.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_kanbanSoap12" binding="tns:WebService_kanbanSoap12">
+      <soap12:address location="http://192.168.0.14/ASS/WebService_kanban.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
